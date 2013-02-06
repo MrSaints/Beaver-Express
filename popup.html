@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="beaver" ng-csp>
+
+<head>
+	<meta charset="utf-8">
+	<title>Beaver Express 2.0 (Powered by AngularJS)</title>
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/css/bex.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="wrapper">
+	<!-- Navigation -->
+	<div class="navbar navbar-inverse">
+	  <div class="navbar-inner">
+		<a class="brand" href="#">B.EX</a>
+		<ul class="nav">
+			<li class="divider-vertical"></li>
+			<li class="active"><a href="#">Loans</a></li>
+			<li><a href="#search">Search</a></li>
+			<li class="divider-vertical"></li>
+		</ul>
+	  </div>
+	</div>
+
+	<!-- Main Content -->
+	<div id="content" ng-view></div>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/angular.min.js"></script>
+<script src="assets/js/angular-resource.min.js"></script>
+<script src="assets/js/bex.js"></script>
+</body>
+
+</html>

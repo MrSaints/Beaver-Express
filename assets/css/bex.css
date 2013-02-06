@@ -1,0 +1,13 @@
+#wrapper {
+	padding: 10px;
+	width: 400px;
+}
+	.cell_title {
+		width: 50%;
+	}
+	.cell_date {
+		width: 25%
+	}
+	.cell_status {
+		width: 25%;
+	}

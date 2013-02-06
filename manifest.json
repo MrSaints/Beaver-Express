@@ -1,0 +1,19 @@
+{
+	"name": "Beaver Express",
+	"version": "2.0",
+	"manifest_version": 2,
+	"description": "Unofficial LSE Library Chrome Extension",
+	"icons": {
+		"48": "assets/img/logo_48.png",
+		"128": "assets/img/logo.png"
+	},
+	"browser_action": {
+		"default_icon": "assets/img/logo.png",
+		"default_popup": "popup.html"
+	},
+	"permissions": [
+		"tabs",
+		"https://moodle.lse.ac.uk/*",
+		"http://lse.summon.serialssolutions.com/*"
+	]
+}
