@@ -2,7 +2,7 @@
 	"name": "Beaver Express",
 	"version": "2.0",
 	"manifest_version": 2,
-	"description": "Unofficial LSE Library Chrome Extension",
+	"description": "An unofficial Google Chrome extension for the London School of Economics and Political Science library.",
 	"icons": {
 		"48": "assets/img/logo_48.png",
 		"128": "assets/img/logo.png"
