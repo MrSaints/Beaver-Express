@@ -1,0 +1,51 @@
+@import "normalize";
+@import "partials/settings";
+@import "foundation";
+
+
+/*
+ * Globals
+ */
+#wrapper {
+	width: 400px;
+}
+
+#content {
+	margin: .5rem 0;
+}
+
+
+/*
+ * Index.html
+ */
+.alert-box--login {
+	a {
+		color: inherit;
+		&:hover {
+			color: darken(#FFF, 10%);
+		}
+	}
+}
+
+.loan_results, .document_results { width: 100% }
+
+.loan_results {
+	.success {
+		background: lighten($success-color, 25%);
+	}
+	.warning {
+		background: lighten($warning-color, 25%);
+	}
+	.alert {
+		background: lighten($alert-color, 25%);
+	}
+}
+	.results_title {
+		width: 50%;
+	}
+	.results_date {
+		width: 25%
+	}
+	.results_status {
+		width: 25%;
+	}

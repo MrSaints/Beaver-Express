@@ -9,21 +9,21 @@ var i = 0;
 var subi = 0;
 
 // Bootstrap
-angular.module('beaver', ['ngResource']).
+angular.module('beaver', ['ngRoute', 'ngResource'])
 		// Routes
-		config(function ($routeProvider) {
-			$routeProvider.
-				when('/', { controller: IndexCtrl, templateUrl: tpl + 'index.html' }).
-				when('/search', { controller: SearchCtrl, templateUrl: tpl + 'search.html' }).			
-				otherwise({redirectTo:'/'});
-		}).
-		factory('Loans', function ($resource) {
+		.config(function ($routeProvider) {
+			$routeProvider
+				.when('/', { controller: IndexCtrl, templateUrl: tpl + 'index.html' })
+				.when('/search', { controller: SearchCtrl, templateUrl: tpl + 'search.html' })
+				.otherwise({redirectTo:'/'});
+		})
+		.factory('Loans', function ($resource) {
 			return $resource(lse_library_loans);
-		}).
-		factory('RenewLoans', function ($resource) {
+		})
+		.factory('RenewLoans', function ($resource) {
 			return $resource(lse_library_renew);
-		}).
-		factory('Search', function ($resource) {
+		})
+		.factory('Search', function ($resource) {
 			return $resource(lse_library_search, {
 				'format': 'json',
 				's.hl': false
@@ -39,7 +39,6 @@ var log = function (data) {
 function IndexCtrl ($scope, Loans, RenewLoans)
 {
 	self = this;
-	
 	self.fetch = function (callback) {
 		Loans.get(function (data) {
 			return callback(data);
@@ -79,6 +78,8 @@ function IndexCtrl ($scope, Loans, RenewLoans)
 			}
 		}
 	}
+
+	$scope.authenticated = false;
 
 	$scope.renew = function () {
 		return self.renew(self.rebuild);
