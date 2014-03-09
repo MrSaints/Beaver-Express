@@ -18,9 +18,9 @@
 /*
  * Index.html
  */
-.alert-box--login {
+.alert-box--login, #fines {
 	a {
-		color: inherit;
+		color: #FFF;
 		&:hover {
 			color: darken(#FFF, 10%);
 		}
