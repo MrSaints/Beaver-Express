@@ -1,6 +1,6 @@
 {
   "name": "Beaver-Express",
-  "version": "2.1.0",
+  "version": "2.2.1",
   "homepage": "https://github.com/MrSaints/Beaver-Express",
   "authors": [
     "Ian Lai <ian@fyianlai.com>"
@@ -17,9 +17,10 @@
     "tests"
   ],
   "dependencies": {
-    "foundation": "~5.0.2",
-    "angular": "~1.2.6",
-    "angular-route": "~1.2.6",
-    "angular-resource": "~1.2.6"
+    "foundation": "~5.2.0",
+    "angular": "~1.3.0",
+    "angular-route": "~1.3.0",
+    "angular-resource": "~1.3.0",
+    "momentjs": "~2.5.1"
   }
 }
