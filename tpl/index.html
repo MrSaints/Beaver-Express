@@ -1,14 +1,17 @@
 <div data-alert class="alert-box alert alert-box--login" ng-show="!authenticated">
-	<a href="https://moodle.lse.ac.uk/" target="_lse">
+	<a href="https://moodle.lse.ac.uk/" target="lse">
 		You are not authenticated on LSE's Central Authentication System! 
 		Login now &#8594;
 	</a>
 </div>
 
 <div ng-show="authenticated">
-	<div data-alert id="summary" class="alert-box info">{{summary}}</div>
+	<div data-alert id="summary" class="alert-box info">
+		{{patron.title}} {{patron.firstname}} {{patron.middlename}} {{patron.surname}}, 
+		{{summary}}
+	</div>
 	<div data-alert id="fines" class="alert-box alert" ng-show="fines">
-		<a href="https://library-1.lse.ac.uk/FinePayment/finePayment/finePayment" target="_lse">
+		<a href="https://library-1.lse.ac.uk/FinePayment/finePayment/finePayment" target="lse">
 			You owe &pound;{{fines}} in unresolved fines.
 		</a>
 	</div>
@@ -25,8 +28,8 @@
 
 			<tbody>
 				<tr ng-repeat="item in items" ng-class="{ alert: item.dueDate.status == 'OVERDUE' || item.dueDate.status == 'Not Renewed', warning: item.dueDate.status == '3DAYS', success: item.dueDate.status == 'OK' || item.dueDate.status == 'Renewed' }">
-					<td>{{item.title}}</td>
-					<td>{{item.dueDate['DD-MM-YY']}} {{item.dueDate['HH:MM']}}</td>
+					<td><a ng-href="{{item.opacUrl}}" target="lse">{{item.title}}</a></td>
+					<td>{{item.dueDate['DD-MM-YY'] | humanize}}</td>
 					<td>{{item.dueDate.status == '3DAYS' && '3 DAYS' || item.dueDate.status}}</td>
 				</tr>
 			</tbody>
