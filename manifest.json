@@ -11,6 +11,16 @@
 		"default_icon": "assets/img/logo.png",
 		"default_popup": "popup.html"
 	},
+	"content_scripts": [{
+		"matches": [
+			"https://moodle.lse.ac.uk/",
+			"https://moodle.lse.ac.uk/my/"
+		],
+		"js": [
+			"bower_components/jquery/dist/jquery.min.js",
+			"assets/js/bex_auto.js"
+		]
+	}],
 	"permissions": [
 		"tabs",
 		"https://moodle.lse.ac.uk/*",
