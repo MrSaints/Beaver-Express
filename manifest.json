@@ -22,6 +22,7 @@
 		]
 	}],
 	"permissions": [
+		"storage",
 		"tabs",
 		"https://moodle.lse.ac.uk/*",
 		"http://lse.summon.serialssolutions.com/*"

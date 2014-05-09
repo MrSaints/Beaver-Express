@@ -43,11 +43,6 @@ bex.filter('humanize', function () {
     }
 });
 
-// Debug
-var log = function (data) {
-    console.log(data);
-}
-
 // Controllers
 function IndexCtrl ($scope, Loans, RenewLoans)
 {
@@ -100,6 +95,17 @@ function IndexCtrl ($scope, Loans, RenewLoans)
     }
 
     self.fetch(self.build);
+
+    chrome.storage.sync.get('autoRenew', function (data) {
+        $scope.autoRenew = data.autoRenew;
+    });
+
+    $scope.toggleAutoRenew = function () {
+        $scope.autoRenew = !$scope.autoRenew;
+        chrome.storage.sync.set({'autoRenew': $scope.autoRenew}, function () {
+            // Debugging
+        });
+    }
 }
 
 // TODO

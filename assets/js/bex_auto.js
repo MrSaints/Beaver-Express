@@ -1,11 +1,6 @@
 'use strict';
 
 (function ($) {
-	// Debug
-	var Log = function (data) {
-	    console.log(data);
-	}
-
 	var Renew = function (data) {
 		if (data.error) {
 			// Do something
@@ -13,8 +8,13 @@
 		}
 
 		// Success
-		Log("Renewed!");
+		console.log("Renewed!");
 	}
 
-	$.getJSON('https://moodle.lse.ac.uk/blocks/lswt/renew.php', Renew);
+	chrome.storage.sync.get("autoRenew", function (data) {
+		if (data.autoRenew === true)
+			$.getJSON('https://moodle.lse.ac.uk/blocks/lswt/renew.php', Renew);
+		else
+			console.log("Disabled");
+	});
 }(jQuery));
