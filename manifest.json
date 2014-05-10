@@ -17,7 +17,6 @@
 			"https://moodle.lse.ac.uk/my/"
 		],
 		"js": [
-			"bower_components/jquery/dist/jquery.min.js",
 			"assets/js/bex_auto.js"
 		]
 	}],
