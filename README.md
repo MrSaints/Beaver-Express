@@ -10,6 +10,8 @@ The library system's generativity will depend ultimately on the versatility of i
 
 [Preview v2.1.0](http://imgur.com/2JhPnLA)
 
+[Preview v2.4.2](http://imgur.com/HCGoZgs)
+
 
 Installation
 ------------
@@ -24,7 +26,7 @@ Installation
 
 ### Everyone Else
 
-1. Download the __.CRX file__ in the _dist_ directory.
+1. Download the [latest] __.CRX file__ in the _dist_ directory or from the [releases](https://github.com/MrSaints/Beaver-Express/releases) section of this repository.
 2. Drag and drop the .CRX file onto Chrome extensions or open it with Chrome.
 3. Install.
 
@@ -33,14 +35,15 @@ Features
 --------
 
 - List / renew loans.
+- *Autorenewal* (the extension will attempt to renew your loans every time you are logged onto Moodle).
 - Search summon _~~(work in progress~~ not functional - JSON API is not available)_.
 
 
 ### Roadmap
 - Notifications.
 - Favourites.
-- Auto Sign-In (via proxy or local storage and AJAX)?
-- Full-fledged app: timetables, reading lists, etc.
+- Auto sign-in (via proxy or local storage and AJAX)?
+- Full-fledged app: timetables, reading lists, etc ([Beaver Guide](https://github.com/MrSaints/GoBeaver)).
 
 
 Development
