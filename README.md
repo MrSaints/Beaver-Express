@@ -1,7 +1,7 @@
 Beaver Express
 ==============
 
-**DEPRECATED**: The _public API_ on Moodle appears to have been removed.
+**DEFUNCT**: The _public API_ on Moodle appears to have been removed.
 
 An unofficial Google Chrome extension for the London School of Economics and Political Science (LSE) library.
 
